@@ -44,7 +44,5 @@ class produit {
 		{
 			return false;
 		}
-
-
 	}
 }

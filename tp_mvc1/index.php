@@ -40,7 +40,7 @@ if(isset($_GET["action"])) {
 			break;
 
 		case "panier":
-			(new controleur)->panier();
+			(new controleur)->panier("");
 			break;
 		
 		case "categorie":

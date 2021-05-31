@@ -40,8 +40,7 @@ class categorie {
 		$req = $this->pdo->prepare($sql);
 		$req->bindParam(':idCategorie', $categorie, PDO::PARAM_INT);
 		$req->execute();
-		$resu = $req->fetch(PDO::FETCH_NUM);
-		return $resu[0];
-
+		return $req->fetch(PDO::FETCH_NUM);
+		
 	}
 }

@@ -78,22 +78,20 @@ class client {
 
 	// Inscrire un client
 	public function inscriptionClient($nom, $prenom, $email, $motDePasse, $rue, $cp, $ville, $tel) {
+		$motDePasse=password_hash($motDePasse, PASSWORD_DEFAULT);
+		$sql = "INSERT INTO client (nomClient,prenomClient,emailClient,motDePasseClient,rueClient,cpClient,villeClient,telClient) VALUES (:nom ,:prenom,:email,:mdp,:rue,:cp,:ville,:tel)";
+		$req = $this->pdo->prepare($sql);
+		$req->bindParam(':nom', $nom, PDO::PARAM_STR);
+		$req->bindParam(':prenom', $prenom, PDO::PARAM_STR);
+		$req->bindParam(':email', $email, PDO::PARAM_STR);
+		$req->bindParam(':mdp', $motDePasse, PDO::PARAM_STR);
+		$req->bindParam(':rue', $rue, PDO::PARAM_STR);
+		$req->bindParam(':cp', $cp, PDO::PARAM_STR);
+		$req->bindParam(':ville', $ville, PDO::PARAM_STR);
+		$req->bindParam(':tel', $tel, PDO::PARAM_STR);
+		$req->execute();
+	
+		}
 		
-
-		    $motDePasse=password_hash($motDePasse, PASSWORD_DEFAULT);
-			$sql = "INSERT INTO client (nomClient,prenomClient,emailClient,motDePasseClient,rueClient,cpClient,villeClient,telClient) VALUES (:nom ,:prenom,:email,:mdp,:rue,:cp,:ville,:tel)";
-			$req = $this->pdo->prepare($sql);
-			$req->bindParam(':nom', $nom, PDO::PARAM_STR);
-			$req->bindParam(':prenom', $prenom, PDO::PARAM_STR);
-			$req->bindParam(':email', $email, PDO::PARAM_STR);
-			$req->bindParam(':mdp', $motDePasse, PDO::PARAM_STR);
-			$req->bindParam(':rue', $rue, PDO::PARAM_STR);
-			$req->bindParam(':cp', $cp, PDO::PARAM_STR);
-			$req->bindParam(':ville', $ville, PDO::PARAM_STR);
-			$req->bindParam(':tel', $tel, PDO::PARAM_STR);
-			$req->execute();
-		
-
-
-	}
+	
 }

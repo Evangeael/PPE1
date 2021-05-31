@@ -64,10 +64,10 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`idClient`, `nomClient`, `prenomClient`, `emailClient`, `motDePasseClient`, `rueClient`, `cpClient`, `villeClient`, `telClient`) VALUES
-(8, 'CLIENT', 'Test', 'test@mail.fr', '$2y$10$NxDeBawdG0REag00rNqi8.DetKO0ATrNp55SUuGLEEVn5paE/jI/C', '04 Rue Phillipe ', '75116', 'Paris', '');
+(8, 'CLIENT', 'Test', 'test@mail.fr', '$2y$10$NxDeBawdG0REag00rNqi8.DetKO0ATrNp55SUuGLEEVn5paE/jI/C', '04 Rue Phillipe ', '75116', 'Paris', ''),
 (10, 'Iglesias', 'Nathanael', 'nael.iglesias@gmail.com', '$2y$10$pevst2jGomWfarvl8BmMuO0juEu.R8osrKzme/IojYrBWQ6NiJD0G', '2 rue du Lin', '57220', 'Condé-Northen', ''),
-(11, 'Mansutti', 'Guillaume', 'guillaume.mansutti@gmail.com', '$2y$10$POAhlVbKAxLlYhusj1wQHOa6A5zwITnGnftQn38N7LxAQIxaBqdxS', '2 rue machin', '57000', 'jsplus', ''),
-(12, 'Arouf', 'Gangsta', 'whaaaaaouuuu@gmail.com', '$2y$10$f6TUPURF3bVT99cbKyIqt.14rVu89Fm4N7nQ1CRC/tyDWl9avchoO', '4 rue du miam', '55000', 'Bar Le Duc', '0781614155');
+(11, 'Mansutti', 'Guillaume', 'guillaume.mansutti@gmail.com', '$2y$10$POAhlVbKAxLlYhusj1wQHOa6A5zwITnGnftQn38N7LxAQIxaBqdxS', '2 rue machin', '57000', 'jsplus', '');
+
 
 -- --------------------------------------------------------
 

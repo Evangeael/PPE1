@@ -315,7 +315,7 @@ class vue {
 		echo "
 				</table>
 				
-				<button type='submit' class=\"btn btn-primary\" name='valider'>Valider le panier</button>
+				<button type='submit' class=\"btn btn-primary\" name='valider' value='valider'>Valider le panier</button>
 			</form>
 		";
 		}
